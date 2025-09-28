@@ -1,5 +1,6 @@
 // src/pages/LearningHub.jsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 // import "../App.css";
 import "./hub.css";
 
@@ -138,6 +139,19 @@ const LearningHub = () => {
 
   return (
     <div className="learning-hub">
+      <nav className="hub-navbar">
+        <div className="nav-brand">
+          <Link to="/">
+            <h1>🌍 EcoQuest</h1>
+          </Link>
+        </div>
+        <div className="nav-links">
+          <Link to="/">Home</Link>
+          <Link to="/challenges">Challenges</Link>
+          <Link to="/dashboard">Dashboard</Link>
+          <Link to="/login">Login</Link>
+        </div>
+      </nav>
       <header className="hub-header">
         <div className="header-content">
           <div className="welcome-section">

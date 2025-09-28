@@ -1,5 +1,6 @@
 // Homepage.jsx
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Learninghub from "./llearninghub";
 import "../App.css";
 import "./hub.css";
@@ -88,13 +89,13 @@ const Homepage = () => {
           </div>
           <div className="nav-links">
             <a href="#contact">Contact</a>
-            <a href="/Challenges">Challenges</a>
-            <a href="/llearninghub">Learning Hub</a>
-            <a href="/Dashboard">Dashboard</a>
+            <Link to="/challenges">Challenges</Link>
+            <Link to="/llearninghub">Learning Hub</Link>
+            <Link to="/dashboard">Dashboard</Link>
           </div>
           <div className="auth-buttons">
-            <button className="btn btn-outline">Login</button>
-            <button className="btn btn-primary">Sign Up</button>
+            <Link to="/login" className="btn btn-outline">Login</Link>
+            <Link to="/register" className="btn btn-primary">Sign Up</Link>
           </div>
         </nav>
       </header>
@@ -125,10 +126,10 @@ const Homepage = () => {
               </div>
             </div>
             <div className="hero-buttons">
-              <button className="btn btn-primary btn-large">
+              <Link to="/llearninghub" className="btn btn-primary btn-large">
                 Start Learning Now
-              </button>
-              <button className="btn btn-outline btn-large">Watch Demo</button>
+              </Link>
+              <Link to="/challenges" className="btn btn-outline btn-large">View Challenges</Link>
             </div>
           </div>
           <div className="hero-visual">
@@ -253,12 +254,12 @@ const Homepage = () => {
           <h2>Ready to Start Your Environmental Journey?</h2>
           <p>Join thousands of students already making a difference</p>
           <div className="cta-buttons">
-            <button className="btn btn-primary btn-large">
+            <Link to="/register" className="btn btn-primary btn-large">
               Get Started Free
-            </button>
-            <button className="btn btn-outline btn-large">
-              Book School Demo
-            </button>
+            </Link>
+            <Link to="/llearninghub" className="btn btn-outline btn-large">
+              Start Learning
+            </Link>
           </div>
         </div>
       </section>
